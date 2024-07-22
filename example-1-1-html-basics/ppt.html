@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Presentation</title>
+</head>
+<body>
+
+<h2>Slide 2</h2>
+<p>Last time...</p>
+<ul>
+    <li>Course introduction</li>
+    <li>Intro to HTML</li>
+    <li>Git understanding remotes, basic usage for commit & push</li>
+</ul>
+<p>上次讲过的内容</p>
+<ul>
+    <li>课程介绍</li>
+    <li>HTML 入门</li>
+    <li>Git：理解远程仓库、提交和推送的基本用法</li>
+</ul>
+
+<h2>Slide 3</h2>
+<p>Today</p>
+<ul>
+    <li>More useful HTML tags to build on what we already know</li>
+    <li>Tables</li>
+    <li>Attributes</li>
+    <li>Anchors</li>
+    <li>Multimedia</li>
+    <li>IFrames</li>
+    <li>Less obviously useful tags</li>
+    <li>More on these in future lectures</li>
+</ul>
+<p>今天的内容</p>
+<ul>
+    <li>更多有用的 HTML 标签</li>
+    <li>表格</li>
+    <li>属性</li>
+    <li>锚点</li>
+    <li>多媒体</li>
+    <li>内嵌框架（IFrames）</li>
+    <li>将来讲座中更多的内容</li>
+</ul>
+
+<h2>Slide 4</h2>
+<p>Tables</p>
+<ul>
+    <li>Often we are given data that makes sense to present in a tabular fashion</li>
+    <li>Tables are very flexible and have been used for page layout in HTML documents for many years</li>
+    <li>No longer recommended as it distracts from the purpose of a table – displaying tabular data</li>
+    <li>Trend with HTML5 is to avoid structures like tables for layout and instead leave that to CSS</li>
+    <li>More on this in future lectures</li>
+</ul>
+<p>表格</p>
+<ul>
+    <li>我们常常会得到一些数据，这些数据以表格形式展示是很有意义的</li>
+    <li>表格非常灵活，多年来一直用于 HTML 文档的页面布局</li>
+    <li>不再推荐使用，因为这会偏离表格的本质——展示表格式数据</li>
+    <li>HTML5 的趋势是避免使用表格布局，而将其留给 CSS</li>
+    <li>将来讲座中会更多讨论</li>
+</ul>
+
+<h2>Slide 5</h2>
+<p>Tables</p>
+<ul>
+    <li><code>&lt;table&gt;</code> - Defines an HTML table and groups the components of the table together</li>
+    <li><code>&lt;tr&gt;</code> - A row in the table that contains a number of cells</li>
+    <li><code>&lt;td&gt;</code> - A data cell in the table</li>
+    <li><code>&lt;th&gt;</code> - A header cell in the table</li>
+    <li><code>&lt;thead&gt;</code> - Table header represents the top-most row of a table</li>
+    <li><code>&lt;tbody&gt;</code> - Table body, the main content of a table</li>
+    <li><code>&lt;tfoot&gt;</code> - Table footer represents the bottom-most row of a table</li>
+    <li><code>&lt;caption&gt;</code> - A caption to attach or associate with the table, must appear immediately after the opening <code>&lt;table&gt;</code> tag</li>
+</ul>
+<p>表格</p>
+<ul>
+    <li><code>&lt;table&gt;</code> - 定义 HTML 表格并将表格组件组合在一起</li>
+    <li><code>&lt;tr&gt;</code> - 表格中的一行，包含多个单元格</li>
+    <li><code>&lt;td&gt;</code> - 表格中的数据单元格</li>
+    <li><code>&lt;th&gt;</code> - 表格中的表头单元格</li>
+    <li><code>&lt;thead&gt;</code> - 表格头部，表示表格的顶行</li>
+    <li><code>&lt;tbody&gt;</code> - 表格主体，主要内容</li>
+    <li><code>&lt;tfoot&gt;</code> - 表格尾部，表示表格的底行</li>
+    <li><code>&lt;caption&gt;</code> - 表格的标题，必须出现在 <code>&lt;table&gt;</code> 标签之后</li>
+</ul>
+
+<h2>Slide 6</h2>
+<p>A basic table</p>
+<pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;col1row1&lt;/td&gt;
+        &lt;td&gt;col2row1&lt;/td&gt;
+        &lt;td&gt;col3row1&lt;/td&gt;
+        &lt;td&gt;col4row1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;col1row2&lt;/td&gt;
+        &lt;td&gt;col2row2&lt;/td&gt;
+        &lt;td&gt;col3row2&lt;/td&gt;
+        &lt;td&gt;col4row2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+<p>基础表格</p>
+<pre><code>&lt;table&gt;
+    &lt;tr&gt;
+        &lt;td&gt;col1row1&lt;/td&gt;
+        &lt;td&gt;col2row1&lt;/td&gt;
+        &lt;td&gt;col3row1&lt;/td&gt;
+        &lt;td&gt;col4row1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;col1row2&lt;/td&gt;
+        &lt;td&gt;col2row2&lt;/td&gt;
+        &lt;td&gt;col3row2&lt;/td&gt;
+        &lt;td&gt;col4row2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+</code></pre>
+
+<h2>Slide 7</h2>
+<p>Basic table observations</p>
+<ul>
+    <li>The table will have as many rows as there are <code>&lt;tr&gt;</code> elements</li>
+    <li>The table will have as many columns as the largest number of <code>&lt;td&gt;</code> elements inside a <code>&lt;tr&gt;</code></li>
+    <li>If one row has five cells and any others have 3 cells each the table will have five columns</li>
+    <li>Cells are placed left-to-right</li>
+</ul>
+<p>基础表格观察</p>
+<ul>
+    <li>表格的行数由 <code>&lt;tr&gt;</code> 元素的数量决定</li>
+    <li>表格的列数由包含最多 <code>&lt;td&gt;</code> 元素的行决定</li>
+    <li>如果一行有五个单元格，其他行各有三个单元格，则表格有五列</li>
+    <li>单元格从左到右排列</li>
+</ul>
+
+<h2>Slide 8-15</h2>
+<p>Intermediate table example</p>
+<p>Demonstrating how to build more complex tables using <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tfoot&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code> tags</p>
+<p>中级表格示例</p>
+<p>演示如何使用 <code>&lt;caption&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tfoot&gt;</code>, <code>&lt;tbody&gt;</code>, <code>&lt;th&gt;</code>, <code>&lt;td&gt;</code> 标签构建更复杂的表格</p>
+
+<h2>Slide 16</h2>
+<p>Intermediate table observations</p>
+<ul>
+    <li>The order of <code>&lt;tbody&gt;</code>, <code>&lt;thead&gt;</code>, and <code>&lt;tfoot&gt;</code> inside the <code>&lt;table&gt;</code> does not matter</li>
+    <li><code>&lt;thead&gt;</code> will always be rendered as the top-most row in the table above the <code>&lt;tbody&gt;</code></li>
+    <li><code>&lt;tfoot&gt;</code> will always be rendered as the bottom-most row in the table below the <code>&lt;tbody&gt;</code></li>
+    <li>The order of <code>&lt;tr&gt;</code> elements does matter. They will be displayed in the order in which they are declared in their respective sections</li>
+</ul>
+<p>中级表格观察</p>
+<ul>
+    <li><code>&lt;tbody&gt;</code>, <code>&lt;thead&gt;</code>, <code>&lt;tfoot&gt;</code> 在 <code>&lt;table&gt;</code> 内的顺序无关紧要</li>
+    <li><code>&lt;thead&gt;</code> 总是显示在表格的最顶部，在 <code>&lt;tbody&gt;</code> 上面</li>
+    <li><code>&lt;tfoot&gt;</code> 总是显示在表格的最底部，在 <code>&lt;tbody&gt;</code> 下面</li>
+    <li><code>&lt;tr&gt;</code> 元素的顺序很重要，它们会按照在各自部分中声明的顺序显示</li>
+</ul>
+
+<h2>Slide 17-18</h2>
+<p>HTML attributes</p>
+<ul>
+    <li>Attributes are name/value pairs that are seen inside the opening tags of HTML elements. We have seen some of these already</li>
+    <li>All HTML elements can have attributes, some just have more than others</li>
+    <li>Attributes are used to provide additional information about an element and come in 4 major varieties</li>
+    <ul>
+        <li>Required – The tag needs these attributes to function correctly</li>
+        <li>Optional – The tag does not require these attributes to function but useful functionality can be added using them</li>
+        <li>Standard – Available to most tags, provide general functionality</li>
+        <li>Event – Will discuss these in future lectures</li>
+    </ul>
+</ul>
+<p>HTML 属性</p>
+<ul>
+    <li>属性是 HTML 元素的起始标签内的名称/值对。我们已经看过一些了</li>
+    <li>所有 HTML 元素都可以有属性，只是有些元素有更多属性</li>
+    <li>属性用于提供有关元素的附加信息，主要有四种类型</li>
+    <ul>
+        <li>必需 – 标签需要这些属性才能正常工作</li>
+        <li>可选 – 标签不需要这些属性也能正常工作，但使用它们可以添加有用的功能</li>
+        <li>标准 – 可用于大多数标签，提供一般功能</li>
+        <li>事件 – 将在未来的讲座中讨论这些</li>
+    </ul>
+</ul>
+
+<h2>Slide 19</h2>
+<p>HTML attributes examples</p>
+<p>Tables</p>
+<ul>
+    <li><code>colspan="2"</code> – Makes a <code>&lt;td&gt;</code> span across multiple columns (merging cells horizontally)</li>
+    <li><code>rowspan="2"</code> – Makes a <code>&lt;td&gt;</code> span across multiple rows (merging cells vertically)</li>
+</ul>
+<p>Ordered lists</p>
+<ul>
+    <li><code>reversed</code> – Makes the list numbers count down rather than up (this attribute does not need a value)</li>
+    <li><code>type="i"</code> – Pick the variety of marker to use in the list (roman numerals, alphabet, etc)</li>
+</ul>
+<p>A large variety of attributes exist and many apply to specific tags</p>
+<p>To find the available attributes for a tag use the MDN tag reference</p>
+<p>HTML 属性示例</p>
+<p>表格</p>
+<ul>
+    <li><code>colspan="2"</code> – 使 <code>&lt;td&gt;</code> 跨越多个列（水平合并单元格）</li>
+    <li><code>rowspan="2"</code> – 使 <code>&lt;td&gt;</code> 跨越多个行（垂直合并单元格）</li>
+</ul>
+<p>有序列表</p>
+<ul>
+    <li><code>reversed</code> – 使列表编号从下往上计数（此属性不需要值）</li>
+    <li><code>type="i"</code> – 选择列表中使用的标记类型（罗马数字、字母等）</li>
+</ul>
+<p>存在大量的属性，许多适用于特定标签</p>
+<p>查找标签的可用属性请使用 MDN 标签参考</p>
+
+<h2>Slide 20-21</h2>
+<p>Anchors</p>
+<ul>
+    <li>Also known as links or hyperlinks, anchors are what allow us to navigate easily from page to page</li>
+    <li>Generally look something like this but can be styled to look different</li>
+    <li>Can link to external pages or to sections within the same page</li>
+</ul>
+<p>锚点</p>
+<ul>
+    <li>也称为链接或超链接，锚点使我们可以轻松地从一个页面导航到另一个页面</li>
+    <li>通常看起来像这样，但可以进行不同的样式化</li>
+    <li>可以链接到外部页面或同一页面内的部分</li>
+</ul>
+
+<h3>Anchor Tags</h3>
+<p><code>&lt;a&gt;</code> - The anchor tag. Marks the content surrounded by the tags as a link. The content can be text or even an image.</p>
+<p>Anchors have a required attribute <code>href</code> which indicates the address of the resource they link to.</p>
+<pre><code>&lt;a href="http://www.google.com"&gt;Google&lt;/a&gt;
+</code></pre>
+<p>锚点标签</p>
+<p><code>&lt;a&gt;</code> - 锚点标签。将标签包围的内容标记为链接。内容可以是文本甚至是图像。</p>
+<p>锚点有一个必需的 <code>href</code> 属性，指示它们链接的资源地址。</p>
+<pre><code>&lt;a href="http://www.google.com"&gt;Google&lt;/a&gt;
+</code></pre>
+
+<h2>Slide 22-25</h2>
+<p>Relative and absolute paths</p>
+<p>Example</p>
+<pre><code>&lt;a href="A.html"&gt;Article&lt;/a&gt; or &lt;a href="./A.html"&gt;Article&lt;/a&gt;
+</code></pre>
+<p>"./" or nothing means relative to the location of the current file; e.g. the file A.html is in the same folder as the current file myPage.html</p>
+<pre><code>&lt;a href="../folder2/B.html"&gt;Article&lt;/a&gt;
+</code></pre>
+<p>"../" means one level up relative to the current location; e.g. the file B.html is one level up and then within the folder2 directory relative to myPage.html</p>
+<pre><code>&lt;a href="/folder2/B.html"&gt;Article&lt;/a&gt;
+</code></pre>
+<p>"/" means relative to the root; e.g. the file B.html is within the folder2 directory that is within the root directory</p>
+<p>相对路径和绝对路径</p>
+<p>示例</p>
+<pre><code>&lt;a href="A.html"&gt;Article&lt;/a&gt; 或 &lt;a href="./A.html"&gt;Article&lt;/a&gt;
+</code></pre>
+<p>"./" 或无表示相对于当前文件的位置；例如，文件 A.html 在与当前文件 myPage.html 相同的文件夹中</p>
+<pre><code>&lt;a href="../folder2/B.html"&gt;Article&lt;/a&gt;
+</code></pre>
+<p>"../" 表示相对于当前文件位置向上一级；例如，文件 B.html 位于 myPage.html 上一级目录中的 folder2 文件夹内</p>
+<pre><code>&lt;a href="/folder2/B.html"&gt;Article&lt;/a&gt;
+</code></pre>
+<p>"/" 表示相对于根目录；例如，文件 B.html 位于根目录中的 folder2 文件夹内</p>
+
+<h2>Slide 26</h2>
+<p>href Attribute - Bookmark</p>
+<p>A bookmark is an anchor that jumps to a specific part of a web page</p>
+<p>You will have encountered one of these if you have used the contents of a Wikipedia page</p>
+<p>Bookmarks are created by setting the id attribute of an element</p>
+<pre><code>&lt;h2 id="example_bm"&gt;A heading&lt;/h2&gt;
+</code></pre>
+<p>Anchors can then link to the bookmark</p>
+<pre><code>&lt;a href="#example_bm"&gt;Link to heading&lt;/a&gt;
+</code></pre>
+<p>href 属性 - 书签</p>
+<p>书签是跳转到网页特定部分的锚点</p>
+<p>如果你使用过维基百科页面的目录，就会遇到过这种书签</p>
+<p>书签通过设置元素的 id 属性创建</p>
+<pre><code>&lt;h2 id="example_bm"&gt;标题&lt;/h2&gt;
+</code></pre>
+<p>然后锚点可以链接到书签</p>
+<pre><code>&lt;a href="#example_bm"&gt;链接到标题&lt;/a&gt;
+</code></pre>
+
+<h2>Slide 27-28</h2>
+<p>Quiz</p>
+<p>Within myPage.html below what would be the value of the href attribute required to link to each of the other html pages in the diagram?</p>
+<p>练习</p>
+<p>在 myPage.html 中，如何为链接到图中每个其他 HTML 页面设置 href 属性值？</p>
+
+<h2>Slide 29-31</h2>
+<p>Images</p>
+<p><code>&lt;img&gt;</code> - The image element. This tag does not need to be closed</p>
+<p>Images have a required attribute <code>src</code> which like the href attribute used with anchors indicates where the image can be found.</p>
+<pre><code>&lt;img src="http://waikato.ac.nz/coa.gif"&gt;
+</code></pre>
+<p>图像</p>
+<p><code>&lt;img&gt;</code> - 图像元素。这个标签不需要闭合</p>
+<p>图像有一个必需的 <code>src</code> 属性，类似于锚点中的 href 属性，指示图像的位置。</p>
+<pre><code>&lt;img src="http://waikato.ac.nz/coa.gif"&gt;
+</code></pre>
+
+<h2>Slide 32</h2>
+<p>Images - File Types</p>
+<ul>
+    <li>Browsers usually support: GIFs, PNGs, JPEGs/JPGs, BMP, and ICO; but not TIFF, JPEG2000, DjVu, etc</li>
+    <li>JPEGs are a lossy format with the quality settings set in software</li>
+    <li>Choose JPEGs for photos and photo-like images</li>
+    <li>GIFs & PNGs are lossless formats, PNG usually produces smaller file sizes</li>
+    <li>Choose GIFs or PNGs for flat color graphics, text, simple logos, and screenshots. Choose PNG if you want transparency</li>
+    <li>GIFs can also be animated, PNG animation (APNG, MNG) is not supported by browsers, so simple image animation on the Web has to be GIF</li>
+</ul>
+<p>图像 - 文件类型</p>
+<ul>
+    <li>浏览器通常支持：GIF、PNG、JPEG/JPG、BMP 和 ICO；但不支持 TIFF、JPEG2000、DjVu 等</li>
+    <li>JPEG 是有损格式，质量设置在软件中进行</li>
+    <li>为照片和类似照片的图像选择 JPEG</li>
+    <li>GIF 和 PNG 是无损格式，PNG 通常生成较小的文件大小</li>
+    <li>为平面颜色图形、文本、简单标志和截图选择 GIF 或 PNG。如果需要透明度，选择 PNG</li>
+    <li>GIF 还可以是动画，PNG 动画（APNG、MNG）不受浏览器支持，因此网页上的简单图像动画必须使用 GIF</li>
+</ul>
+
+<h2>Slide 33</h2>
+<p>Images - More points</p>
+<ul>
+    <li>You can resize a large image to fit in a smaller area using the width and height attributes, however this is not always wise</li>
+    <li>You are still downloading a large photo which can be slow</li>
+    <li>Sometimes you are better off creating a smaller "thumbnail" version of the image and linking to the larger version</li>
+</ul>
+<pre><code>&lt;a href="fullsize_image.png"&gt;
+    &lt;img src="thumbnail_image.png"&gt;
+&lt;/a&gt;
+</code></pre>
+<p>图像 - 更多要点</p>
+<ul>
+    <li>可以使用 width 和 height 属性调整大图像的大小以适应较小的区域，但这并不总是明智的</li>
+    <li>你仍然在下载大照片，这可能很慢</li>
+    <li>有时最好创建一个较小的图像缩略图，并链接到较大的版本</li>
+</ul>
+<pre><code>&lt;a href="fullsize_image.png"&gt;
+    &lt;img src="thumbnail_image.png"&gt;
+&lt;/a&gt;
+</code></pre>
+
+<h2>Slide 34-36</h2>
+<p>Multimedia</p>
+<ul>
+    <li><code>&lt;audio&gt;</code> - A container for audio files. The audio tag represents the controls or player for audio-only files</li>
+    <li><code>&lt;video&gt;</code> - A container for video files. The video tag represents the controls or player for audio/visual files</li>
+    <li><code>&lt;source&gt;</code> - Represents a possible source location for audio or video files. Source elements should be placed inside the appropriate <code>&lt;audio&gt;</code> or <code>&lt;video&gt;</code> tags</li>
+</ul>
+<p>多媒体</p>
+<ul>
+    <li><code>&lt;audio&gt;</code> - 音频文件的容器。音频标签表示音频文件的控件或播放器</li>
+    <li><code>&lt;video&gt;</code> - 视频文件的容器。视频标签表示音频/视频文件的控件或播放器</li>
+    <li><code>&lt;source&gt;</code> - 表示音频或视频文件的可能源位置。源元素应放置在相应的 <code>&lt;audio&gt;</code> 或 <code>&lt;video&gt;</code> 标签内</li>
+</ul>
+
+<h2>Slide 37</h2>
+<p>Multimedia - Patents</p>
+<p>Variability of codec support in browsers is the result of patents (and "politics" to some extent)</p>
+<p>多媒体 - 专利</p>
+<p>浏览器中编解码器支持的差异是专利（和一定程度上的“政治”）的结果</p>
+
+<h2>Slide 38</h2>
+<p>IFrames – The tag</p>
+<p><code>&lt;iframe&gt;</code> - Represents the frame in which a linked page is displayed</p>
+<p>Iframes, like images, have a required attribute <code>src</code> which indicates where the linked page can be found.</p>
+<p>For example:</p>
+<pre><code>&lt;iframe src="common.html"&gt;&lt;/iframe&gt;
+</code></pre>
+<p>Iframes are often used to do things like embed videos from other sites within a page.</p>
+<p>内嵌框架（IFrames） – 标签</p>
+<p><code>&lt;iframe&gt;</code> - 表示显示链接页面的框架</p>
+<p>内嵌框架像图像一样，有一个必需的 <code>src</code> 属性，指示链接页面的位置</p>
+<p>例如：</p>
+<pre><code>&lt;iframe src="common.html"&gt;&lt;/iframe&gt;
+</code></pre>
+<p>内嵌框架常用于在页面内嵌入来自其他网站的视频等内容</p>
+
+<h2>Slide 39</h2>
+<p>Divs and Spans</p>
+<p>To wrap up the day, we have two mystery tags which we will use in future labs:</p>
+<ul>
+    <li><code>&lt;div&gt;</code> - A block-level element that has no default appearance. It can be used to group block-level elements</li>
+    <li><code>&lt;span&gt;</code> - An inline element that has no default appearance. It can be used to group inline elements</li>
+</ul>
+<p>If you inspect any modern web page, you will see a huge number of <code>&lt;div&gt;</code>’s and <code>&lt;span&gt;</code>’s. Any guesses as to why?</p>
+<p>Divs 和 Spans</p>
+<p>今天结束时，我们有两个神秘标签，在未来的实验中会用到：</p>
+<ul>
+    <li><code>&lt;div&gt;</code> - 一个没有默认外观的块级元素。可用于分组块级元素</li>
+    <li><code>&lt;span&gt;</code> - 一个没有默认外观的行内元素。可用于分组行内元素</li>
+</ul>
+<p>如果你检查任何现代网页，你会看到大量的 <code>&lt;div&gt;</code> 和 <code>&lt;span&gt;</code>。猜猜为什么？</p>
+
+<h2>Slide 40-48</h2>
+<p>High-Level View of the Web</p>
+<ul>
+    <li>A typical web page consists of many separate resources</li>
+    <li>HTML markup</li>
+    <li>Images</li>
+    <li>JavaScript code</li>
+    <li>Presentation details using CSS</li>
+    <li>Video</li>
+    <li>Audio</li>
+    <li>Resources that make up a page can come from different web servers</li>
+    <li>The web browser needs to request each resource, manage the responses, and construct the final result into the final layout to display to the user</li>
+</ul>
+<p>Web 的高层视图</p>
+<ul>
+    <li>一个典型的网页由许多独立资源组成</li>
+    <li>HTML 标记</li>
+    <li>图像</li>
+    <li>JavaScript 代码</li>
+    <li>使用 CSS 的展示细节</li>
+    <li>视频</li>
+    <li>音频</li>
+    <li>构成页面的资源可以来自不同的 Web 服务器</li>
+    <li>浏览器需要请求每个资源，管理响应，并将最终结果构建成最终布局显示给用户</li>
+</ul>
+
+<h2>Slide 49</h2>
+<p>HTML Forms</p>
+<p>In short, HTML Forms allow input rather than just reading Web content</p>
+<p>An HTML form is a section of the HTML document containing special elements — called controls — which can be used to obtain data from the user. This data can then be processed either in the browser or on the server</p>
+<p>More information:</p>
+<p><a href="https://www.w3.org/TR/html401/interact/forms.html">W3C Forms</a></p>
+<p>HTML 表单</p>
+<p>简而言之，HTML 表单允许输入数据而不仅仅是读取 Web 内容</p>
+<p>HTML 表单是 HTML 文档的一部分，包含特殊元素（称为控件），用于从用户获取数据。然后可以在浏览器或服务器中处理这些数据</p>
+<p>更多信息：</p>
+<p><a href="https://www.w3.org/TR/html401/interact/forms.html">W3C Forms</a></p>
+
+<h2>Slide 50-54</h2>
+<p>Forms - Tags</p>
+<p>Like with tables, forms have a number of tags and attributes associated with them. The first one we need to know about is:</p>
+<p><code>&lt;form&gt;</code> - Defines the start and end point of the form. Groups the form components</p>
+<p>All controls and labels that make up the form need to be contained within the <code>&lt;form&gt;</code> tags</p>
+<p>The <code>&lt;form&gt;</code> tag has two important but optional attributes: action & method</p>
+<p>More on these shortly</p>
+<p>表单 - 标签</p>
+<p>像表格一样，表单有许多与之关联的标签和属性。我们需要了解的第一个是：</p>
+<p><code>&lt;form&gt;</code> - 定义表单的起点和终点。分组表单组件</p>
+<p>构成表单的所有控件和标签需要包含在 <code>&lt;form&gt;</code> 标签内</p>
+<p><code>&lt;form&gt;</code> 标签有两个重要但可选的属性：action 和 method</p>
+<p>稍后将详细介绍</p>
+
+<h2>Slide 55</h2>
+<p>Forms - Identifying and Naming Elements</p>
+<p>If we are processing form information, then we need to know what values from each control mean</p>
+<p>Where did they come from, what do they represent</p>
+<p>Use the <code>name=""</code> attribute to give a name to an input's value</p>
+<pre><code>&lt;input type="text" name="firstname"&gt;
+&lt;input type="text" name="lastname"&gt;
+</code></pre>
+<p>Useful to software but not so useful for the end-user. Would be useful to have some sort of <code>&lt;label&gt;</code> for these</p>
+<p>表单 - 识别和命名元素</p>
+<p>如果我们在处理表单信息，那么我们需要知道每个控件的值是什么意思</p>
+<p>它们来自哪里，它们代表什么</p>
+<p>使用 <code>name=""</code> 属性为输入的值命名</p>
+<pre><code>&lt;input type="text" name="firstname"&gt;
+&lt;input type="text" name="lastname"&gt;
+</code></pre>
+<p>对软件有用，但对最终用户不太有用。最好有某种 <code>&lt;label&gt;</code> 来表示这些</p>
+
+<h2>Slide 56</h2>
+<p>Forms - Labels</p>
+<p><code>&lt;label&gt;</code> - Provides a non-editable textual label for other controls</p>
+<p>Labels are associated with other controls through the use of the <code>for</code> attribute</p>
+<p>The value of a label's <code>for</code> attribute should match the value of another element's <code>id</code> attribute</p>
+<p>All HTML elements can have an <code>id</code> attribute, they must be unique</p>
+<pre><code>&lt;label for="fnameID"&gt;First Name&lt;/label&gt;
+&lt;input type="text" id="fnameID" name="firstname"&gt;
+</code></pre>
+<p>表单 - 标签</p>
+<p><code>&lt;label&gt;</code> - 为其他控件提供不可编辑的文本标签</p>
+<p>通过 <code>for</code> 属性将标签与其他控件关联</p>
+<p>标签的 <code>for</code> 属性值应与另一元素的 <code>id</code> 属性值匹配</p>
+<p>所有 HTML 元素都可以有 <code>id</code> 属性，必须唯一</p>
+<pre><code>&lt;label for="fnameID"&gt;First Name&lt;/label&gt;
+&lt;input type="text" id="fnameID" name="firstname"&gt;
+</code></pre>
+
+<h2>Slide 57</h2>
+<p>Forms - A Basic Form</p>
+<pre><code>&lt;form&gt;
+  &lt;label for="fnameID"&gt;First Name&lt;/label&gt;
+  &lt;input type="text" id="fnameID" name="firstname"&gt;
+  &lt;label for="lnameID"&gt;Last Name&lt;/label&gt;
+  &lt;input type="text" id="lnameID" name="lastname"&gt;
+&lt;/form&gt;
+</code></pre>
+<p>表单 - 基本示例</p>
+<pre><code>&lt;form&gt;
+  &lt;label for="fnameID"&gt;First Name&lt;/label&gt;
+  &lt;input type="text" id="fnameID" name="firstname"&gt;
+  &lt;label for="lnameID"&gt;Last Name&lt;/label&gt;
+  &lt;input type="text" id="lnameID" name="lastname"&gt;
+&lt;/form&gt;
+</code></pre>
+
+<h2>Slide 58</h2>
+<p>Forms - Grouping Controls</p>
+<p>Often a form will be made up of a number of sections that contain related controls. We can group our controls into sections with a fieldset</p>
+<p><code>&lt;fieldset&gt;</code> - Groups form controls with a visual border</p>
+<p><code>&lt;legend&gt;</code> - A short textual label for a fieldset. Should be the first element inside a fieldset</p>
+<pre><code>&lt;fieldset&gt;
+  &lt;legend&gt;An example&lt;/legend&gt;
+  Controls here
+&lt;/fieldset&gt;
+</code></pre>
+<p>表单 - 分组控件</p>
+<p>通常一个表单由多个包含相关控件的部分组成。我们可以使用 fieldset 将控件分组</p>
+<p><code>&lt;fieldset&gt;</code> - 用视觉边框分组表单控件</p>
+<p><code>&lt;legend&gt;</code> - 为 fieldset 提供简短的文本标签。应为 fieldset 内的第一个元素</p>
+<pre><code>&lt;fieldset&gt;
+  &lt;legend&gt;An example&lt;/legend&gt;
+  Controls here
+&lt;/fieldset&gt;
+</code></pre>
+
+<h2>Slide 59</h2>
+<p>Forms - Checkboxes</p>
+<p>Checkboxes normally appear in a logical grouping in which 0 or more items can be selected. They are created using <code>&lt;input&gt;</code> controls with the type attribute set to checkbox</p>
+<ul>
+    <li>0 or more items can be selected by default indicated by the presence of the checked attribute</li>
+    <li>The value sent to the processing application for a checked box can be controlled with the value attribute</li>
+    <li>Checkboxes can be grouped together by setting the name attributes of related inputs to the same value</li>
+</ul>
+<pre><code>&lt;label for="ffCheckbox"&gt; FireFox&lt;/label&gt;
+&lt;input type="checkbox" name="browser_choice" value="firefox" id="ffCheckbox"&gt;
+&lt;label for="cCheckbox"&gt; Chrome&lt;/label&gt;
+&lt;input type="checkbox" name="browser_choice" value="chrome" id="cCheckbox"&gt;
+&lt;label for="sCheckbox"&gt; Safari&lt;/label&gt;
+&lt;input type="checkbox" name="browser_choice" value="safari" id="sCheckbox"&gt;
+&lt;label for="ieCheckbox"&gt; Internet Explorer&lt;/label&gt;
+&lt;input type="checkbox" name="browser_choice" value="ie" id="ieCheckbox"&gt;
+</code></pre>
+<p>表单 - 复选框</p>
+<p>复选框通常出现在一个逻辑分组中，其中可以选择 0 个或多个项目。它们通过将 type 属性设置为 checkbox 的 <code>&lt;input&gt;</code> 控件创建</p>
+<ul>
+    <li>0 个或多个项目可以通过 checked 属性表示默认选中状态</li>
+    <li>选中的复选框发送到处理应用程序的值可以通过 value 属性控制</li>
+    <li>可以通过设置相关输入的 name 属性为相同值来分组复选框</li>
+</ul>
+<pre><code>&lt;label for="ffCheckbox"&gt; FireFox&lt;/label&gt;
+&lt;input type="checkbox" name="browser_choice" value="firefox" id="ffCheckbox"&gt;
+&lt;label for="cCheckbox"&gt; Chrome&lt;/label&gt;
+&lt;input type="checkbox" name="browser_choice" value="chrome" id="cCheckbox"&gt;
+&lt;label for="sCheckbox"&gt; Safari&lt;/label&gt;
+&lt;input type="checkbox" name="browser_choice" value="safari" id="sCheckbox"&gt;
+&lt;label for="ieCheckbox"&gt; Internet Explorer&lt;/label&gt;
+&lt;input type="checkbox" name="browser_choice" value="ie" id="ieCheckbox"&gt;
+</code></pre>
+
+<h2>Slide 60</h2>
+<p>Forms - Radiobuttons</p>
+<p>Radiobuttons normally appear in a logical grouping in which only 1 item can be selected. They are created using <code>&lt;input&gt;</code> controls with the type attribute set to radio</p>
+<ul>
+    <li>Normally 1 item is selected by default indicated by the presence of the checked attribute</li>
+    <li>The value sent to the processing application for a checked box can be controlled with the value attribute</li>
+    <li>Related radiobuttons should be grouped together by setting the name attributes of related radiobuttons to the same value</li>
+</ul>
+<pre><code>&lt;label for="maleRadioID"&gt;Male&lt;/label&gt;
+&lt;input type="radio" checked id="maleRadioID" value="male" name="Gender"&gt;
+&lt;label for="femaleRadioID"&gt;Female&lt;/label&gt;
+&lt;input type="radio" id="femaleRadioID" value="female" name="Gender"&gt;
+</code></pre>
+<p>表单 - 单选按钮</p>
+<p>单选按钮通常出现在一个逻辑分组中，其中只能选择 1 个项目。它们通过将 type 属性设置为 radio 的 <code>&lt;input&gt;</code> 控件创建</p>
+<ul>
+    <li>通常 1 个项目通过 checked 属性表示默认选中状态</li>
+    <li>选中的单选按钮发送到处理应用程序的值可以通过 value 属性控制</li>
+    <li>相关单选按钮应通过将相关单选按钮的 name 属性设置为相同值来分组</li>
+</ul>
+<pre><code>&lt;label for="maleRadioID"&gt;Male&lt;/label&gt;
+&lt;input type="radio" checked id="maleRadioID" value="male" name="Gender"&gt;
+&lt;label for="femaleRadioID"&gt;Female&lt;/label&gt;
+&lt;input type="radio" id="femaleRadioID" value="female" name="Gender"&gt;
+</code></pre>
+
+<h2>Slide 62-63</h2>
+<p>Form - Select</p>
+<p>A select, also known as a drop-down list, provides a list of items for the user to choose from</p>
+<p><code>&lt;select&gt;</code> - Groups options together to form a drop-down list. Should have a name attribute set to identify the selected option for the processing application</p>
+<p><code>&lt;option&gt;</code> - An option that exists within a <code>&lt;select&gt;</code>. The value sent to the processing application for a selected item can be controlled with the value attribute. The default option can be set with the selected attribute</p>
+<pre><code>&lt;label for="countryID"&gt;Country&lt;/label&gt;
+&lt;select id="countryID" name="countryName"&gt;
+  &lt;option value="nz" selected&gt;New Zealand&lt;/option&gt;
+  &lt;option value="aus"&gt;Australia&lt;/option&gt;
+  &lt;option value="in"&gt;India&lt;/option&gt;
+  &lt;option value="us"&gt;United States&lt;/option&gt;
+  &lt;option value="other"&gt;other&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+<p>表单 - 下拉列表</p>
+<p>select 也称为下拉列表，为用户提供一组可选择的项目</p>
+<p><code>&lt;select&gt;</code> - 将选项分组以形成下拉列表。应设置 name 属性以标识处理应用程序的选定选项</p>
+<p><code>&lt;option&gt;</code> - 存在于 <code>&lt;select&gt;</code> 中的选项。发送到处理应用程序的选定项目的值可以通过 value 属性控制。默认选项可以通过 selected 属性设置</p>
+<pre><code>&lt;label for="countryID"&gt;Country&lt;/label&gt;
+&lt;select id="countryID" name="countryName"&gt;
+  &lt;option value="nz" selected&gt;New Zealand&lt;/option&gt;
+  &lt;option value="aus"&gt;Australia&lt;/option&gt;
+  &lt;option value="in"&gt;India&lt;/option&gt;
+  &lt;option value="us"&gt;United States&lt;/option&gt;
+  &lt;option value="other"&gt;other&lt;/option&gt;
+&lt;/select&gt;
+</code></pre>
+
+<h2>Slide 64-65</h2>
+<p>Forms - More Text Input</p>
+<p>The textarea control allows for multiline textual input by the user. By default, the textarea is shown in a monospaced (fixed width) font and needs to be told via the rows and cols attributes how many rows and columns worth of text to show without scrollbars</p>
+<p>If rows or cols limits are exceeded, the browser is responsible for wrapping text or adding scroll bars</p>
+<p>Can optionally provide initial text as the content of the control</p>
+<pre><code>&lt;label for="profile_text"&gt; About Text&lt;/label&gt;
+&lt;textarea id="profile_text" name="profile_text_area" rows="4" cols="40"&gt; enter text here&lt;/textarea&gt;
+</code></pre>
+<p>表单 - 更多文本输入</p>
+<p>textarea 控件允许用户输入多行文本。默认情况下，textarea 显示为等宽字体（固定宽度），需要通过 rows 和 cols 属性指定显示多少行和列的文本而不出现滚动条</p>
+<p>如果超过 rows 或 cols 限制，浏览器负责换行文本或添加滚动条</p>
+<p>可以选择提供初始文本作为控件的内容</p>
+<pre><code>&lt;label for="profile_text"&gt; About Text&lt;/label&gt;
+&lt;textarea id="profile_text" name="profile_text_area" rows="4" cols="40"&gt; enter text here&lt;/textarea&gt;
+</code></pre>
+
+<h2>Slide 66</h2>
+<p>Forms - Reset</p>
+<p>The reset control is an input element with the type attribute set to reset and is presented by the browser as a button</p>
+<p>When clicked, all form controls are reset to their initial values. The browser handles this; we do not need to do this ourselves</p>
+<p>By default, the button will appear with the text "reset" but if an alternative label is desired it can be provided via the value attribute</p>
+<pre><code>&lt;input type="reset" value="Reset the form"&gt;
+</code></pre>
+<p>表单 - 重置按钮</p>
+<p>重置控件是将 type 属性设置为 reset 的输入元素，由浏览器显示为按钮</p>
+<p>单击时，所有表单控件将重置为初始值。浏览器处理此操作；我们不需要自己处理</p>
+<p>默认情况下，按钮将显示为“reset”文本，但如果需要其他标签，可以通过 value 属性提供</p>
+<pre><code>&lt;input type="reset" value="Reset the form"&gt;
+</code></pre>
+
+<h2>Slide 67-68</h2>
+<p>Forms - Submit</p>
+<p>The submit control is an input element with the type attribute set to submit and is presented by the browser as a button</p>
+<p>When clicked, the values selected/provided in form controls are sent to the processing application</p>
+<p>By default, the button will appear with the text "submit" but if an alternative label is desired it can be provided via the value attribute</p>
+<pre><code>&lt;input type="submit" value="Submit for processing"&gt;
+</code></pre>
+<p>表单 - 提交按钮</p>
+<p>提交控件是将 type 属性设置为 submit 的输入元素，由浏览器显示为按钮</p>
+<p>单击时，表单控件中选择/提供的值将发送到处理应用程序</p>
+<p>默认情况下，按钮将显示为“submit”文本，但如果需要其他标签，可以通过 value 属性提供</p>
+<pre><code>&lt;input type="submit" value="Submit for processing"&gt;
+</code></pre>
+
+<h2>Slide 69-70</h2>
+<p>Forms - Submitting</p>
+<p>When the user clicks the 'Submit' button, we want to have the form data processed in some way. This is normally done by a piece of program code, e.g., JavaScript code executed in the browser or alternatively by server-side code (e.g., a Servlet or PHP script) executed on a server</p>
+<p>We might call this piece of code a form processing agent – and we need to identify the agent that the form data should be sent to</p>
+<p>We identify the agent in the action attribute of the <code>&lt;form&gt;</code> element</p>
+<pre><code>&lt;form action="https://trex-sandwich.com/echo/"&gt;   &lt;!-- form content here --&gt;&lt;/form&gt;
+&lt;form action="../processing_script.jsp"&gt;   &lt;!-- form content here --&gt;&lt;/form&gt;
+</code></pre>
+<p>表单 - 提交</p>
+<p>当用户点击“提交”按钮时，我们希望以某种方式处理表单数据。这通常由一段程序代码完成，例如，在浏览器中执行的 JavaScript 代码或在服务器上执行的服务器端代码（例如 Servlet 或 PHP 脚本）</p>
+<p>我们可能会将这段代码称为表单处理代理，并且需要确定表单数据应发送到哪个代理</p>
+<p>我们在 <code>&lt;form&gt;</code> 元素的 action 属性中标识代理</p>
+<pre><code>&lt;form action="https://trex-sandwich.com/echo/"&gt;   &lt;!-- 表单内容 --&gt;&lt;/form&gt;
+&lt;form action="../processing_script.jsp"&gt;   &lt;!-- 表单内容 --&gt;&lt;/form&gt;
+</code></pre>
+
+<h2>Slide 71</h2>
+<p>Form - Methods</p>
+<p>Along with the action attribute, a form element has a method attribute which defines the HTTP method (verb) to use when communicating with the server</p>
+<p>For forms, the verb is normally GET or POST</p>
+<p>The method chosen affects the HTTP message header and determines the way in which the data will be transported to the server</p>
+<p>The HTTP message header is a bit out of scope for now, but the way in which the data is transported is relevant to us</p>
+<p>表单 - 方法</p>
+<p>除了 action 属性，表单元素还有一个 method 属性，用于定义与服务器通信时使用的 HTTP 方法（动词）</p>
+<p>对于表单，动词通常是 GET 或 POST</p>
+<p>选择的方法会影响 HTTP 消息头，并决定数据传输到服务器的方式</p>
+<p>HTTP 消息头暂时超出我们的讨论范围，但数据传输方式与我们相关</p>
+
+<h2>Slide 72</h2>
+<p>GET vs POST</p>
+<ul>
+    <li>The browser is responsible for sending data from a form to the destination specified in the action attribute</li>
+    <li>If the GET method is used, name=value pairs are appended to the action attribute address starting with a "?" separated by "&"</li>
+    <li>Example: https://ex.com/form.jsp?fname=Peter&lname=Jackson&gend=male</li>
+    <li>If the POST method is used, the data is sent as the body of a message</li>
+    <li>Not visible in the browser/history. Useful for passwords!</li>
+</ul>
+<p>GET 与 POST 的区别</p>
+<ul>
+    <li>浏览器负责将表单数据发送到 action 属性指定的目的地</li>
+    <li>如果使用 GET 方法，name=value 对附加到 action 属性地址，起始于 "?"，用 "&" 分隔</li>
+    <li>示例：https://ex.com/form.jsp?fname=Peter&lname=Jackson&gend=male</li>
+    <li>如果使用 POST 方法，数据作为消息主体发送</li>
+    <li>在浏览器/历史记录中不可见。适用于密码等敏感信息！</li>
+</ul>
+
+</body>
+</html>

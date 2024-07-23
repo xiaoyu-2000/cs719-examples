@@ -1,15 +1,9 @@
 :root{
-
     font-family: fantasy, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-
 }
 
 
-
-
 p{
-
     border: 4px dashed rgb(23, 33, 42);
     color: blue;
     border-bottom: 5px solid rgb(190, 73, 64);
@@ -17,13 +11,19 @@ p{
     border-radius: 20px;
     font-weight: bold;
     font-size: larger;
+    width: 75%;
+    margin: auto;
 
-    
 
 }
 
-#first-para{
+#first-para:hover{
 
+
+    background-color: bisque;
+    scale: 1.1;
+}
+#first-para{
     color: brown;
     font-size: small;
     font-style: italic;
@@ -31,11 +31,7 @@ p{
 }
 
 
-
 #third-para{
-
-
-
     color: rgb(255, 8, 0);
 }
 
@@ -44,36 +40,30 @@ strong, li{
     font-size: x-large
 }
 
-input{
 
+input{
     border-radius: 1cqi;
 }
 
-input:focus {
 
+input:focus {
     background-color: blue;
     outline: 5px solid red;
-
 }
+
 
 table{
     border: 1px solid black;
     border-collapse: collapse;
-    
-
-
 }
-
 
 
 table th, table td{
-
     border: 1px solid black;
 }
+
+
 thead tr, tfoot tr {
-
-
-
     background-color: beige;
 }
 
@@ -83,15 +73,22 @@ tbody tr:nth-child(odd){
 
     background-color: azure;
 }
+
+
 tbody tr:nth-child(even){
-
-
     background-color: rgb(252, 255, 240);
 }
 
 
 
-table tr:hover {
-
+table tr:hover { 
     background-color: bisque;
+}
+
+
+box{
+
+    width: 100;
+    height: 300;
+
 }

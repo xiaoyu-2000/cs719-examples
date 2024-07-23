@@ -1,16 +1,21 @@
 img {
   width: 50%;
   height: auto;
+
+
 }
 
-#filter1 {
+
+
+#filter1:not(:hover){
   filter: brightness(40%);
+  transition: 1s ease;
 }
 
-#filter2 {
+#filter2:not(:hover){
   filter: contrast(200%);
 }
 
-#filter3 {
+#filter3:hover{
   filter: blur(2px) sepia(70%);
 }

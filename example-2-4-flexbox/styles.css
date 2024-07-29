@@ -3,7 +3,8 @@ body {
 }
 
 #container {
-  border: 1px solid black;
+  border: 2px solid rgb(153, 121, 121);
+  border-radius: 20px;
   box-sizing: border-box;
   margin: 10px;
   width: calc(100vw - 20px);
@@ -19,19 +20,65 @@ body {
 }
 
 #box1 {
-  align-self: flex-start; /* This override causes the first box to be aligned at the start of the minor axis (top, in this case) */
+
+  align-items: center;/* This override causes the first box to be aligned at the start of the minor axis (top, in this case) */
 }
+
+#box2 {
+
+  align-items: start;/* This override causes the first box to be aligned at the start of the minor axis (top, in this case) */
+}
+
 
 #box3 {
   align-self: flex-end; /* This override causes the third box to be aligned at the end of the minor axis (bottom, in this case) */
 }
 
+#box8 {
+  align-self: flex-end; /* This override causes the third box to be aligned at the end of the minor axis (bottom, in this case) */
+}
+
+#box7 {
+  align-self: flex-start; /* This override causes the third box to be aligned at the end of the minor axis (bottom, in this case) */
+
+  width: 300px;
+}
+
+#box5 {
+  flex-grow: 1;
+}
+
+
+#box4 {
+  flex-shrink: 1;
+}
+
+
 .box {
-  width: 50px;
+  width: 40px;
   height: 50px;
-  background-color: orchid;
+  background-color: rgb(193, 156, 192);
   box-sizing: border-box;
-  border: 1px dashed black;
+  border: 1px solid rgb(129, 118, 118);
+  border-radius: 10px;
   text-align: center;
-  margin: 2px;
+  margin: 5px;
+}
+
+
+.box:hover{
+
+  
+  transform:rotate(1.1);
+
+
+}
+
+#container{
+
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  gap: 10px;
+  /* the minimun amout of spase */
 }

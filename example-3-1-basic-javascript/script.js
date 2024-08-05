@@ -1,5 +1,5 @@
 // When the script first runs, display this alert box to the user.
-alert("Welcome to this webpage!");
+// alert("Welcome to this webpage!");
 
 /**
  * Get a reference to the button on the page from within our JS code.
@@ -8,11 +8,69 @@ alert("Welcome to this webpage!");
  * an element selector - "button") and will return the first HTML element on the page which matches that
  * CSS selector.
  */
+
+console.log("Hello concole")
 const button = document.querySelector("button");
+let i = 4;
+i = 10.932;
+console.log(i);
+const aBoolean = false;
+const a = 5;
+const b = 10;
+const sum = a + b;
+console.log("The sum is:" + sum);
+console.log(aBoolean);
+
+const divid = 10 / 8;
+const divid2 = Math.floor(10 / 8);
+console.log("The divided number is:" + " " + divid);
+console.log("The floor divided number is:" + " " + divid2);
+const hello = "world";
+const myName = "Qiaoyu" + " " + "Lu";
+console.log("My name is:" + myName);
+
+
+const age = 23;
+const hobby = "watching movies";
+const myInfo = `Hello my name is ${myName}, I am ${age} years old, and my hobby is ${hobby}`;
+console.log("Qiaoyu's info:" + " " + myInfo);
+console.log(myName.toUpperCase);
+console.log(myInfo.length);
+console.log(myInfo.indexOf("i"));
+console.log(myInfo.substring(10, 20));
+console.log(myInfo.includes("my"));
+
+const string42 =42;
+console.log(string42);
+const value = parseInt("42.5432");
+console.log(value);
+
+const value2 = parseFloat("42.5432");
+console.log(value2);
+
+const firstPara = document.querySelector("p");
+console.log(firstPara);
+
+firstPara.style.color = "red";
+firstPara.style.fontWeight = "bold";
+firstPara.style.textAlign = "center";
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // This is a function that we can call later on to run the code inside.
 function handleButtonClick() {
-  alert("You clicked me!");
+  alert("Helloword!");
 }
 
 /**

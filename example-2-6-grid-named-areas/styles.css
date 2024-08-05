@@ -1,8 +1,14 @@
 .container {
   display: grid;
+  /* 把container这个容器设置成网格容器 */
   grid-auto-rows: auto;
+  /* 每行的高度根据内容自动调整 */
   grid-template-columns: 100px 1fr 100px;
-
+  /*                第一列宽  占剩余 第三列100像素 */
+  /* 定义了网格容器的列布局：
+    第一列宽度为 100 像素。
+第二列的宽度占据剩余的可用空间
+第三列宽度为 100 像素。 */
   /**
    * This defines five named areas in this grid: header, lsidebar, main, rsidebar, and footer.
    * - The "header" area takes up the entire first row.
@@ -13,35 +19,46 @@
    */
   grid-template-areas:
     "header header header"
+    /* header 区域占据整个第一行的所有列 */
     "lsidebar main rsidebar"
+    /* lsidebar 区域占据第二行的第一列，
+    main 区域占据第二行的第二列，
+    rsidebar 区域占据第二行的第三列。 */
     "footer footer footer";
 }
 
-.container > :not(.main-content) {
+
+.container> :not(.main-content) {
+  /* .container >：选择 .container 元素的所有直接子元素 */
+  /* :not(.main-content)：排除类名为 .main-content 的元素 */
   text-align: center;
 }
+
 
 .float-left {
   float: left;
   margin-right: 10px;
 }
 
+
 .sidebar-left {
-  background-color: salmon;
+  background-color: rgb(126, 255, 83);
 
   /* This element will be placed in the "lsidebar" grid area in its parent. */
   grid-area: lsidebar;
 }
 
+
 .sidebar-right {
-  background-color: darksalmon;
+  background-color: rgb(81, 31, 15);
 
   /* This element will be placed in the "rsidebar" grid area in its parent. */
   grid-area: rsidebar;
 }
 
+
 .header {
-  background-color: goldenrod;
+  background-color: rgb(176, 155, 103);
 
   /* This element will be placed in the "header" grid area in its parent. */
   grid-area: header;
@@ -56,6 +73,7 @@
   justify-content: space-between;
 }
 
+
 .footer {
   background-color: gold;
 
@@ -63,24 +81,32 @@
   grid-area: footer;
 }
 
+
 .main-content {
-  background-color: white;
+  background-color: rgb(170, 131, 131);
   text-align: justify;
-  padding: 10px;
+  /* 文本对齐 */
+  padding: 15px;
+  /* 内边距 */
 
   /* This element will be placed in the "main" grid area in its parent. */
   grid-area: main;
-
-  /**
-   * Although the main-content div is laid out according to its parent container's
-   * grid layout, it can itself lay out its children according to its own
-   * rules (flex, in this case).
-   */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  /* 将 .main-content 元素分配到其父容器的 main 网格区域。
+  这个区域名称是通过 grid-template-areas 
+  属性在父容器的 CSS 中定义的。 */
+  display:flex;
+  /* 使用 Flexbox 布局。
+  Flexbox 是一种布局模型，
+  用于在容器中安排元素 */
+  flex-direction:row;
+  /* 设置主轴方向为行，即子元素在水平方向上排列 */
+  flex-wrap:wrap;
+  /* 允许子元素换行。当子元素的总宽度超出容器宽度时，它们将自动换行到下一行 */
   justify-content: space-between;
+
+  
 }
+
 
 .tile {
   flex: 1 200px;
@@ -90,18 +116,12 @@
   text-align: center;
 }
 
+
 /* The CSS inside this media query will only trigger when the webpage
     is displayed in a window at MOST 600px in width. */
 @media screen and (max-width: 600px) {
   .container {
     grid-template-columns: 1fr;
-
-    /**
-     * On screens 600px or smaller, these four named grid areas will take up a whole row each,
-     * while the "rsidebar" area - not mentioned here - will not be displayed at all.
-     * This allows us to completely re-shape the layout of the page based on screen size, to enable
-     * the page to be displayed easier on mobile devices.
-     */
     grid-template-areas:
       "header"
       "lsidebar"
@@ -112,4 +132,10 @@
   .sidebar-right {
     display: none;
   }
+
+  .sidebar-left {
+    display: none;
+  }
+
+  /* 当屏幕小于600px的时候，两个sidebar都消失 */
 }

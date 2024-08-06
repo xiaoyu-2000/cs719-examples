@@ -3,6 +3,7 @@
 	the page's <title>. -->
 <svelte:head>
   <title>Home</title>
+  <title>qiaoyuLu</title>
 </svelte:head>
 
 <h1>Home page</h1>

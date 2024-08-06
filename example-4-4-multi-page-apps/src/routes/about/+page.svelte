@@ -25,6 +25,7 @@
 
 <h1>About me</h1>
 <p>My name is Andrew, and I like Pokemon!</p>
-
+<h1>About Qiaoyu Lu</h1>
+<p>My name is Qiaoyu Lu, and I like movies</p>
 <!-- When we click this button, we'll go home -->
 <button on:click={goHome}>Go home!</button>

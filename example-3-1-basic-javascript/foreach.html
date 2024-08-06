@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate OL with JavaScript</title>
+</head>
+<body>
+    <h1>My List</h1>
+    <div id="listContainer"></div>
+
+    <script>
+        // 定义数组
+        const items = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+
+        // 创建 <ol> 元素
+        const ol = document.createElement('ol');
+
+        // 遍历数组并创建 <li> 元素
+        items.forEach(function(item) {
+            const li = document.createElement('li');
+            li.textContent = item;
+            ol.appendChild(li);
+        });
+
+        // 将 <ol> 添加到页面上的 <div> 容器中
+        document.getElementById('listContainer').appendChild(ol);
+    </script>
+
+
+
+</body>
+</html>

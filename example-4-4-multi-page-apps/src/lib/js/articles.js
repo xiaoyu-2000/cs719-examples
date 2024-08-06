@@ -59,5 +59,11 @@ export const articles = [
     title: "Pokémon Business Ventures",
     content:
       "<p>Explore the exciting world of Pokémon business ventures and turn your passion into a successful enterprise. Learn the ins and outs of running a PokéMart, managing a Gym, or establishing a research lab. Navigate the challenges and opportunities in the Pokémon business landscape, and carve your path to success as an entrepreneur in the Pokémon world.</p><p>From serving the needs of local Trainers to contributing to cutting-edge research, discover the diverse business opportunities available in the Pokémon universe and make your mark as a Pokémon business leader.</p>"
+  },
+  {
+    id: 11,
+    title: "Qiaoyu Lu",
+    content:
+      "<p>Born in 23 Dec. 2000, he is a student</p>"
   }
 ];
